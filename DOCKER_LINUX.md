@@ -11,9 +11,9 @@ Make sure that your machine has at least **4 GB of RAM**.
 2. *(Optional) Follow **[Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/)***
 3. Run this command in the terminal:
    ```
-   sudo docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   sudo docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
-4. Enjoy your **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉 It will also run automatically at startup
+4. Enjoy your **Matchering E2.0.3 at 🎉 **http://localhostip:8360** 🎉 It will also run automatically at startup
 
 ### IMPORTANT: Read the [Keep the Privacy] page if you would like to host our web application publicly!
 

@@ -36,7 +36,7 @@
 
 8. Copy and paste this command into the **Command Prompt**, then press <kbd>↵ Enter</kbd>:
    ```
-   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
 
    ![Win Step 9](https://raw.githubusercontent.com/sergree/matchering/master/images/win_step_9.png)
@@ -45,7 +45,7 @@
 
    ![Win Step 10](https://raw.githubusercontent.com/sergree/matchering/master/images/win_step_10.png)
 
-10. Enjoy your **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉 It will also run automatically at startup
+10. Enjoy your Enjoy your **Matchering E2.0.3 at 🎉 **http://localhostip:8360** 🎉 It will also run automatically at startup
 
     ![Win Step 11](https://raw.githubusercontent.com/sergree/matchering/master/images/win_step_11.png)
 

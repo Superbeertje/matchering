@@ -8,9 +8,9 @@
 - `docker pull sergree/matchering-web`
 3. Finally, run the updated container:
    ```
-   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
-4. Enjoy your updated **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉
+4. Enjoy your updated **Matchering 2.0** at 🎉 **http://localhostip:8360** 🎉
 
 ## macOS Updating
 
@@ -22,9 +22,9 @@
 - `docker pull sergree/matchering-web`
 3. Finally, run the updated container:
    ```
-   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
-4. Enjoy your updated **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉
+4. Enjoy your updated **Matchering 2.0** at 🎉 **http://localhostip:8360** 🎉
 
 ## Linux Updating
 
@@ -36,6 +36,6 @@
 - `sudo docker pull sergree/matchering-web`
 3. Finally, run the updated container:
    ```
-   sudo docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   sudo docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
-4. Enjoy your updated **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉
+4. Enjoy your updated **Matchering 2.0** at 🎉 **http://localhostip:8360** 🎉

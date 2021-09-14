@@ -17,10 +17,10 @@
 5. Press <kbd>⌘ Command</kbd> + <kbd>Space</kbd> to open the **Spotlight** menu. Type `Terminal` and then hit <kbd>↵ Return</kbd>
 6. Copy and paste this command into the **Terminal**, then press <kbd>↵ Return</kbd>:
    ```
-   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always sergree/matchering-web
+   docker run -dp 8360:8360 -v mgw-data:/app/data --name mgw-app --restart always superbeertje-dev-audio/matchering-web
    ```
 7. Wait for **Matchering 2.0** to load. It will print `Status: Downloaded newer image...`
-8. Enjoy your **Matchering 2.0** at 🎉 **http://127.0.0.1:8360** 🎉 It will also run automatically at startup
+8. Enjoy your **Matchering 2.0** at 🎉 **http://localhostip:8360** 🎉 It will also run automatically at startup
 
 ### IMPORTANT: Read the [Keep the Privacy] page if you would like to host our web application publicly!
 

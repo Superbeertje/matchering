@@ -14,7 +14,6 @@ Audio Matching and Mastering Python Library
 __title__ = "matchering"
 
 __author__ = "Sergree"
-_EDITOR__ = "Superbeertje"
 __credits__ = ["Sergey Grishakov", "Igor Isaev", "Chin Yun Yu", "Elizaveta Grishakova"]
 __maintainer__ = "Sergree"
 __email__ = "wokashi.rg@gmail.com"
