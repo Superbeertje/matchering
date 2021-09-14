@@ -84,7 +84,7 @@ class Config:
     ):
         assert internal_sample_rate > 0
         assert isinstance(internal_sample_rate, int)
-        if internal_sample_rate != 4800:
+        if internal_sample_rate != 48000:
             debug(
                 "Using an internal sample rate other than 44100 has not been tested properly! "
                 "Use it at your own risk!"
