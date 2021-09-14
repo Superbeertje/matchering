@@ -64,7 +64,7 @@ class Config:
         internal_sample_rate: int = 48000,
         max_length: float = 60 * 60,
         max_piece_size: float = 1000,
-        threshold: float = 0.9981,
+        threshold: float = 0.9988,
         min_value: float = 1e-6,
         fft_size: int = 2048,
         lin_log_oversampling: int = 4,
