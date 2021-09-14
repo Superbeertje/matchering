@@ -98,12 +98,12 @@ def check(
         config.max_length * sample_rate,
         config.fft_size * sample_rate // config.internal_sample_rate,
         name,
-        Code.ERROR_TARGET_LENGTH_IS_EXCEEDED
+        Code.ERROR_TARGET_LENGTH_IS_EXCEEDED_MAX_60_MIN
         if name == "TARGET"
-        else Code.ERROR_REFERENCE_LENGTH_LENGTH_IS_EXCEEDED,
-        Code.ERROR_TARGET_LENGTH_IS_TOO_SMALL
+        else Code.ERROR_REFERENCE_LENGTH_LENGTH_IS_EXCEEDED_USE_FOR_BOTH_FILES_SAME_LENGTH,
+        Code.ERROR_TARGET_LENGTH_IS_TOO_SMALL_USE_FOR_BOTH_FILES_SAME_LENGTH
         if name == "TARGET"
-        else Code.ERROR_REFERENCE_LENGTH_LENGTH_TOO_SMALL,
+        else Code.ERROR_REFERENCE_LENGTH_LENGTH_TOO_SMALL_USE_FOR_BOTH_FILES_SAME_LENGTH,
     )
 
     array = __check_channels(
@@ -120,9 +120,9 @@ def check(
         config.internal_sample_rate,
         name,
         warning if name == "TARGET" else info,
-        Code.WARNING_TARGET_IS_RESAMPLED
+        Code.WARNING_TARGET_IS_RESAMPLED_TO_48KHZ
         if name == "TARGET"
-        else Code.INFO_REFERENCE_IS_RESAMPLED,
+        else Code.INFO_REFERENCE_IS_RESAMPLED_TO_48KHZ,
     )
 
     if name == "TARGET":
@@ -130,7 +130,7 @@ def check(
             array,
             config.clipping_samples_threshold,
             config.limited_samples_threshold,
-            Code.WARNING_TARGET_IS_CLIPPING,
+            Code.WARNING_TARGET_IS_CLIPPING_CHECK_DYNAMIC_RANGE,
             Code.WARNING_TARGET_LIMITER_IS_APPLIED,
         )
 
@@ -139,4 +139,4 @@ def check(
 
 def check_equality(target: np.ndarray, reference: np.ndarray) -> None:
     if target.shape == reference.shape and np.allclose(target, reference):
-        raise ModuleError(Code.ERROR_TARGET_EQUALS_REFERENCE)
+        raise ModuleError(Code.ERROR_TARGET_EQUALS_REFERENCE_USE_DIFFERENT_FILES)

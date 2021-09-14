@@ -27,7 +27,7 @@ class LimiterConfig:
         self,
         attack: float = 1,
         hold: float = 1,
-        release: float = 3000,
+        release: float = 4000,
         attack_filter_coefficient: float = -2,
         hold_filter_order: int = 1,
         hold_filter_coefficient: float = 7,
@@ -61,12 +61,12 @@ class LimiterConfig:
 class Config:
     def __init__(
         self,
-        internal_sample_rate: int = 44100,
-        max_length: float = 15 * 60,
-        max_piece_size: float = 15,
-        threshold: float = (2 ** 15 - 61) / 2 ** 15,
+        internal_sample_rate: int = 48000,
+        max_length: float = 60 * 60,
+        max_piece_size: float = 1000,
+        threshold: float = 0.9988,
         min_value: float = 1e-6,
-        fft_size: int = 4096,
+        fft_size: int = 2048,
         lin_log_oversampling: int = 4,
         rms_correction_steps: int = 4,
         clipping_samples_threshold: int = 8,
@@ -84,7 +84,7 @@ class Config:
     ):
         assert internal_sample_rate > 0
         assert isinstance(internal_sample_rate, int)
-        if internal_sample_rate != 44100:
+        if internal_sample_rate != 48000:
             debug(
                 "Using an internal sample rate other than 44100 has not been tested properly! "
                 "Use it at your own risk!"
